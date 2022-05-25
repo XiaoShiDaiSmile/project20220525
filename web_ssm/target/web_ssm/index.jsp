@@ -1,1 +1,1 @@
-<c:redirect url="/sys/list"/>
+<c:redirect url="/sys/login"/>

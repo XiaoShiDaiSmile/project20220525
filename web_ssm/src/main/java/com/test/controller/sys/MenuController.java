@@ -30,6 +30,7 @@ public class MenuController {
     
     @RequestMapping(value={"form"})
     public String form(Menu menu,Model model){
+        System.out.println(menu);
         return "sys/menuForm";
     }
 
@@ -37,5 +38,16 @@ public class MenuController {
     public String save(Menu menu,Model model){
         menuService.insert(menu);
         return "redirect:/sys/list";
+    }
+
+    @RequestMapping(value={"delete"})
+    public String delete(Menu menu,Model model){
+        menuService.delete(menu);
+        return "redirect:/sys/list";
+    }
+
+    @RequestMapping(value={"login"})
+    public String login(){
+        return "sys/login";
     }
 }

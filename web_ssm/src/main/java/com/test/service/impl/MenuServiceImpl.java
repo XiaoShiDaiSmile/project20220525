@@ -20,7 +20,14 @@ public class MenuServiceImpl implements MenuService {
 
     @Override
     public int insert(Menu menu) {
+        menu.preInsert();
         menuMapper.insert(menu);
+        return 0;
+    }
+
+    @Override
+    public int delete(Menu menu) {
+        menuMapper.delete(menu);
         return 0;
     }
 }

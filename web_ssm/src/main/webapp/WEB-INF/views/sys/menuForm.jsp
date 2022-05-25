@@ -13,7 +13,6 @@
 <body>
 <div>MenuForm</div>
 <form:form id="menuForm" modelAttribute="menu" action="/sys/save" method="post">
-    <form:input path="id" placeholder="编号"/>
     <form:input path="parentId" placeholder="父级编号"/>
     <form:input path="parentIds" placeholder="全部父级编号"/>
     <form:input path="name" placeholder="名称"/>
