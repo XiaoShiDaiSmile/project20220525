@@ -17,4 +17,10 @@ public class MenuServiceImpl implements MenuService {
         final List<Menu> allList = menuMapper.findAllList();
         return allList;
     }
+
+    @Override
+    public int insert(Menu menu) {
+        menuMapper.insert(menu);
+        return 0;
+    }
 }
